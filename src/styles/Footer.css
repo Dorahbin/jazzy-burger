@@ -1,41 +1,58 @@
 @media (max-width: 425px) {
   .google-img {
-    margin-top: 1rem;
+    margin-top: 3rem;
     margin-bottom: 2rem;
   }
 
-  .app-img{
-    margin-top: 3rem;
+  .app-img {
+    margin-top: -2rem;
   }
 
   .center {
     text-align: center;
   }
 
-  .contact-box{
-    margin-top: ;
+  .contact-box {
+    margin-top:2rem ;
   }
 
-  .margin-equal{
+  .margin-equal {
     margin-top: 1rem;
   }
- 
-  .margin-socials{
+
+  .margin-socials {
     margin-top: 2rem;
     padding-bottom: 2rem;
   }
 
-  .margin-follow{
+  .support-flex-container {
+    flex-direction: column;
+  }
+  .margin-follow {
     margin-top: 2.5rem;
   }
 
-  .socials{
+  .support {
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .payment {
+    justify-content: center;
+    align-items: center;
+  }
+  .support-img {
+    width: 50%;
+    margin: auto;
+  }
+  .socials {
     justify-content: center;
   }
 
-  .img-flex{
-    flex-direction: column;
-    width: 65% ;
+  .img-flex {
+    flex-direction: column-reverse;
+    width: 65%;
     margin: auto;
   }
 }

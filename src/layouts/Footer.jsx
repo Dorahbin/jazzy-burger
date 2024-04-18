@@ -1,5 +1,5 @@
-import supportImg from '../assets/support-img.svg';
-import paymentImg from '../assets/payment-img.svg';
+import supportImg from '../assets/247-img.svg';
+import paymentImg from '../assets/100-img.svg';
 import faceBookImg from '../assets/facebook-img.svg';
 import instaImg from '../assets/insta-img.svg';
 import youTubeImg from '../assets/youtube-img.svg';
@@ -13,13 +13,29 @@ const Footer = () => {
     <>
       <div className='bg-dark'>
         <div className='container center'>
-          <main className='  pt-5 justify-content-between  '>
+          <main className=' pt-5  '>
             {/* first section */}
             <section className='d-lg-flex justify-content-between  align-items-center'>
               {/* img-div */}
               <div className='d-flex img-flex  gap-4 '>
-                <img src={supportImg} alt='' className='support-img ' />
-                <img src={paymentImg} alt='' className='support-img  ' />
+                {/* support div */}
+                <div className='d-flex support-flex-container text-light'>
+                  <img src={supportImg} alt='' className='support-img' />
+                  <div className='d-flex  flex-lg-column support '>
+                    <span className='fw-bolder fs-4 mt-lg-1'>247</span>
+                    <span className='fw-bolder fs-12'>support</span>
+                  </div>
+                </div>
+
+                {/* payment div */}
+                <div className='d-flex support-flex-container payment-container text-light'>
+                  <img src={paymentImg} alt='' className='support-img' />
+                  <div className='d-flex  flex-column payment w-100'>
+                    <span className='fw-bolder fs-4'>100%</span>
+                    <span className='fw-bolder fs-12'>Payment Secured</span>
+                  </div>
+                </div>
+                {/* <img src={paymentImg} alt='' className='support-img' /> */}
               </div>
 
               {/* img-div */}
