@@ -1,0 +1,11 @@
+/* navbar */
+.bag {
+  width: 20rem;
+}
+
+.cart-num {
+  bottom: 0.5rem;
+  left: 1rem;
+  top: -0.5rem;
+}
+

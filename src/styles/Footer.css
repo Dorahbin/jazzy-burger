@@ -1,0 +1,41 @@
+@media (max-width: 425px) {
+  .google-img {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .app-img{
+    margin-top: 3rem;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .contact-box{
+    margin-top: ;
+  }
+
+  .margin-equal{
+    margin-top: 1rem;
+  }
+ 
+  .margin-socials{
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .margin-follow{
+    margin-top: 2.5rem;
+  }
+
+  .socials{
+    justify-content: center;
+  }
+
+  .img-flex{
+    flex-direction: column;
+    width: 65% ;
+    margin: auto;
+  }
+}

@@ -1,0 +1,19 @@
+.card-inner {
+  width: 19rem;
+}
+
+@media (max-width: 425px) {
+  .card-inner {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card-inner {
+    width: 100%;
+  }
+}
+@media (min-width: 1024px) {
+  .card-inner {
+    width: 30%;
+  }
+}
