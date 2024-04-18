@@ -6,6 +6,7 @@ import CheckOut from './pages/CheckOut';
 import SignUp from './auth/SignUp';
 import SignIn from './auth/SignIn';
 import { useState } from 'react';
+import Error from './pages/Error';
 function App() {
   const [cartItem, setCartItem] = useState([1,1,1])
   return (
@@ -18,6 +19,7 @@ function App() {
           </Route>
           <Route path='/SignUp' element={<SignUp />} />
           <Route path='/SignIn' element={<SignIn />} />
+          <Route path='*' element={<Error/>}/>
         </Routes>
       </BrowserRouter>
     </>
