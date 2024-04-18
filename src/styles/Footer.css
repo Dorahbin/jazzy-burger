@@ -56,3 +56,20 @@
     margin: auto;
   }
 }
+
+@media (max-width: 768px) {
+ .img-flex{
+  margin-top: 2rem;
+ }
+
+ .contact-box {
+  margin-top:2rem ;
+}
+
+.margin-follow {
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+
+}

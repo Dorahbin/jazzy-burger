@@ -8,6 +8,8 @@ import appStoreImg from '../assets/appstore-img.svg';
 import googleStoreImg from '../assets/google-store-img.svg';
 import '../styles/Footer.css';
 import { Link } from 'react-router-dom';
+import copyImg from '../assets/copy-img.svg';
+import { LuDot } from 'react-icons/lu';
 const Footer = () => {
   return (
     <>
@@ -79,6 +81,11 @@ const Footer = () => {
             </div>
           </main>
         </div>
+      </div>
+      <div className='container text-center'>
+        <span>
+          &copy; JJB Concepts <LuDot /> Developed by our Digital LLC
+        </span>
       </div>
     </>
   );
