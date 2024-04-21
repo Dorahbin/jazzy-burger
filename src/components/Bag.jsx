@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import deleteImg from '../assets/delete-img.svg';
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 const Bag = () => {
   const [showCart, setShowCart] = useState(false);
 
@@ -20,11 +20,12 @@ const Bag = () => {
                 1 <span className='text-danger'>Double Beef Burger</span>
               </h5>
               <div className='d-flex align-items-center gap-2 text-primary'>
-                <img src={deleteImg} alt='delete-img' />
+                <img src={deleteImg} alt='delete-img' role='button' />
                 10500
               </div>
             </div>
             <hr />
+            
 
             <div className='d-flex justify-content-between align-items-center gap-3'>
               <h5 className='text-secondary '>items SubTotal</h5>
@@ -33,9 +34,9 @@ const Bag = () => {
 
             <hr />
 
-            <button className='btn btn-lg btn-success w-100 text-light rounded-1 '>
+            <Link to='/CheckOut' className='btn btn-lg btn-success w-100 text-light rounded-1 '>
               Proceed to Checkout
-            </button>
+            </Link>
           </section>
         )}
       </main>

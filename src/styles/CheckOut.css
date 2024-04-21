@@ -1,0 +1,19 @@
+.checkout-container{
+  background-color: #f5f5f5;
+}
+
+.add-span{
+  background-color: rgba(225, 186, 186, 0.75);
+  width: 6.5rem;
+}
+
+@media(max-width:425px){
+  .checkout-sections{
+    width: 90%;
+    margin: auto;
+  }
+
+  .section-2{
+    margin-bottom: 3rem;
+  }
+}

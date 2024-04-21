@@ -4,6 +4,23 @@ import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import { FiEye } from 'react-icons/fi';
+import { FiEyeOff } from 'react-icons/fi';
+import { yupResolver } from '@hookform/resolvers/yup';
+import * as yup from 'yup';
+
+const schema = yup.object().shape({
+  email: yup.string().email('invalid email').required('Email is required'),
+
+  password: yup
+    .string()
+    .required('Password is required')
+    .min(8, 'Password must be at least 8 characters')
+    .matches(
+      /^(?=.[a-zA-Z])(?=.\d)(?=.[@$!%?&])[A-Za-z\d@$!%*?&]/,
+      'Password must contain at least one letter, one number, and one special character'
+    ),
+});
 const SignIn = () => {
   const [isReveal, setReveal] = useState(false);
 
@@ -15,7 +32,9 @@ const SignIn = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    resolver: yupResolver(schema),
+  });
   const onSubmit = (data) => console.log(data);
 
   useEffect(() => {
@@ -26,7 +45,7 @@ const SignIn = () => {
       <main className='container vh-50 d-flex flex-column my-3'>
         <div>
           <div className='text-center'>
-            <Link>
+            <Link to='/'>
               <img src={jazzyLogo} alt='' />
             </Link>
           </div>
@@ -47,12 +66,12 @@ const SignIn = () => {
               <Form.Control
                 type='email'
                 placeholder='name@example.com'
-                className='border border-3 rounded-3'
-                {...register('email', { required: true })}
+                className='border border-2 rounded-3'
+                {...register('email')}
               />
               {errors.email && (
                 <span className='text-danger fw-bold'>
-                  Email is required
+                  {errors.email.message}
                 </span>
               )}
             </FloatingLabel>
@@ -63,12 +82,12 @@ const SignIn = () => {
               <Form.Control
                 type={isReveal ? 'text' : 'password'}
                 placeholder='Password'
-                className='border border-3 rounded-3 position-relative'
+                className='border border-2 rounded-3 position-relative'
                 {...register('password', { required: true })}
               />
               {errors.password && (
                 <span className='text-danger fw-bold'>
-                  Password is required
+                  {errors.password.message}
                 </span>
               )}
 
@@ -77,7 +96,7 @@ const SignIn = () => {
                 role='button'
                 onClick={handleToggle}
               >
-                {isReveal ? 'hide' : 'show'}
+                {isReveal ? <FiEye /> : <FiEyeOff />}
               </p>
             </FloatingLabel>
 
@@ -101,7 +120,7 @@ const SignIn = () => {
               Sign In
             </button>
             <p className='text-center fw-bold d-flex gap-2 mt-3 justify-content-center'>
-              Don't have an account? <Link to='/SignUp'>Create one</Link>
+              Dont have an account? <Link to='/SignUp'>Create one</Link>
             </p>
           </Form>
         </div>

@@ -10,7 +10,7 @@ import AuthDropDown from '../components/AuthDropDown';
 import { GoChevronDown } from 'react-icons/go';
 import { GoChevronUp } from 'react-icons/go';
 import Bag from '../components/Bag';
-const NavBar = ({cartItem}) => {
+const NavBar = ({ cartItem }) => {
   const [authShow, setAuthShow] = useState(false);
   const [bagShow, setBagShow] = useState(false);
   return (
@@ -74,19 +74,23 @@ const NavBar = ({cartItem}) => {
             </div>
             {/* cart img */}
             <div className='position-relative'>
-            <img
-              src={cartLogo}
-              alt='cart-img'
-              role='button'
-              onClick={() => (!bagShow ? setBagShow(true) : setBagShow(false))}
-            />
+              <img
+                src={cartLogo}
+                alt='cart-img'
+                role='button'
+                onClick={() =>
+                  !bagShow ? setBagShow(true) : setBagShow(false)
+                }
+              />
 
-            <p  className='position-absolute cart-num bg-danger text-light text-center rounded-circle w-75 h-75 fw-bold'>{cartItem.length}</p>
+              <p className='position-absolute cart-num bg-danger text-light text-center rounded-circle w-75 h-75 fw-bold'>
+                {cartItem.length}
+              </p>
 
-            <div className='position-absolute top-100 end-0 mt-3'>
-              {bagShow && <Bag />}
+              <div className='position-absolute top-100 end-0 mt-3'>
+                {bagShow && <Bag />}
+              </div>
             </div>
-           </div>
           </section>
         </nav>
         <Outlet />
