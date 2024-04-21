@@ -32,13 +32,12 @@ const CheckOut = () => {
             {/* recipient info */}
             <div className='d-flex flex-column justify-content-between'>
               <h5 className='fw-bolder'>Recipient information</h5>
-             
+
               {/* < to='#' className='btn btn-lg bg-dark text-light'>
                 {' '}
                 Add Recipient
               </Link> */}
-            <Recipient />
-
+              <Recipient />
             </div>
             <hr />
 
@@ -49,7 +48,7 @@ const CheckOut = () => {
                 {' '}
                 Add Delivery Address
               </Link> */}
-              <Address/>
+              <Address />
             </div>
             <hr />
 
@@ -77,7 +76,8 @@ const CheckOut = () => {
               {/* double grill */}
               <div>
                 <h5 className='fw-bolder text-danger'>
-                  Double Grilled Chiken Burger
+                  Double Grilled{' '}
+                  <span className='d-none d-lg-block'>Chiken Burger</span>
                 </h5>
                 <span className='d-flex gap-3 add-span rounded p-2'>
                   <img src={addImg} alt='' role='btn' />1{' '}
